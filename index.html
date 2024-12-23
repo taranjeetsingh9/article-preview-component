@@ -9,6 +9,7 @@
   
   <title>Frontend Mentor | Article preview component</title>
   <link rel="stylesheet" href="./index.css">
+
 </head>
 <body>
 
@@ -39,15 +40,16 @@
   </div>
    
    
-        <button class="share-btn" aria-label="Share this article"><img src="./images/icon-share.svg" alt="share icon">
+        <button class="share-btn" type="button" aria-label="Share this article">
+          <img src="./images/icon-share.svg" alt="share icon">
  
-        
-        <span class="share-options">
-          <a href="#">Share</a>
-          <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
-          <a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a>
-          <a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
-        </span>
+          <span class="share-options">
+            <a href="#">Share</a>
+            <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a>
+            <a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
+          </span>
+     
       </button>
 
    
@@ -55,14 +57,19 @@
 </header>
 </article>
 </main>
-  
-   
+
+<script>
+  const shareButton = document.querySelector('.share-btn');
+  const shareOptions = document.querySelector('.share-options');
+
+  shareButton.addEventListener(
+    'click', () => {
+      shareOptions.classList.toggle('show');
+
+}    )
 
 
+</script>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Taranjeet Singh</a>.
-  </div>
 </body>
 </html>
